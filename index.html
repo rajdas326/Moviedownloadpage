@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Download</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="movie-container">
+        <img src="https://via.placeholder.com/300x450?text=Movie+Poster" alt="Movie Poster" class="movie-poster">
+        <div class="movie-details">
+            <h2>Movie Name (2024)</h2>
+            <p><strong>⭐ Rating:</strong> 8.5/10</p>
+            <p><strong>🎭 Genre:</strong> Action, Thriller</p>
+            <p><strong>⏳ Duration:</strong> 2h 15m</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A must-watch thriller!</p>
+
+            <!-- Download Button (Directly Visible) -->
+            <a id="download-btn" class="show-btn" target="_blank">⬇️ Download Now</a>
+        </div>
+    </div>
+
+    <!-- Related Movies Section -->
+    <div class="related-movies">
+        <h3>🎬 You May Also Like</h3>
+        <div class="movie-list">
+            <a href="#" class="movie-item">
+                <img src="https://via.placeholder.com/150x220?text=Movie+1" alt="Movie 1">
+                <p>Movie 1</p>
+            </a>
+            <a href="#" class="movie-item">
+                <img src="https://via.placeholder.com/150x220?text=Movie+2" alt="Movie 2">
+                <p>Movie 2</p>
+            </a>
+            <a href="#" class="movie-item">
+                <img src="https://via.placeholder.com/150x220?text=Movie+3" alt="Movie 3">
+                <p>Movie 3</p>
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <style>
+        /* Smooth Background Animation */
+@keyframes gradientAnimation {
+    0% { background: #141e30; }
+    50% { background: #243b55; }
+    100% { background: #141e30; }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #141e30, #243b55);
+    background-size: 400% 400%;
+    animation: gradientAnimation 6s infinite alternate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Movie Container */
+.movie-container {
+    display: flex;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+    max-width: 600px;
+}
+
+.movie-container:hover {
+    transform: scale(1.03);
+}
+
+/* Movie Poster */
+.movie-poster {
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Movie Details */
+.movie-details {
+    margin-left: 20px;
+}
+
+h2 {
+    color: #222;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #444;
+    margin: 5px 0;
+}
+
+/* Download Button */
+#download-btn {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #ff5722;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(255, 87, 34, 0.5);
+    transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+#download-btn:hover {
+    background: #e64a19;
+    transform: scale(1.1);
+}
+
+/* Button Animation */
+.show-btn {
+    opacity: 1 !important;
+    pointer-events: all !important;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Related Movies Section */
+.related-movies {
+    margin-top: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.related-movies h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.movie-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.movie-item {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie-item img {
+    width: 100px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.movie-item:hover {
+    transform: scale(1.1);
+}
+    </style>
+    <script>
+        document.getElementById("download-btn").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default behavior
+    window.open("https://example1.com", "_blank"); // First link
+    window.open("https://example2.com", "_blank"); // Second link
+});
+    </script>
+</body>
+</html>
