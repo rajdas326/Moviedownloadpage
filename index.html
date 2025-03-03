@@ -17,14 +17,17 @@
     <div class="movie-container">
         <img src="https://i.ibb.co/Y4ZGr7mD/images-1.jpg" alt="Movie Poster" class="movie-poster">
         <div class="movie-details">
-            <h2></h2>
+            <h2>Farzi (2023)</h2>
             <p><strong>⭐ Rating:</strong> 8.5/10</p>
             <p><strong>🎭 Genre:</strong> Action, Mystery, Thriller</p>
             <p><strong>⏳ Duration:</strong> 2h 15m</p>
             <p>A Hindi Dubbed action thriller movie, featuring Ajith Kumar in the main role</p>
 
-            <!-- Download Button (Directly Visible) -->
-            <a id="download-btn" class="show-btn" target="_blank">⬇️ Download Now</a>
+            <!-- Download Button (Improved) -->
+            <a id="download-btn" class="download-btn" target="_blank">
+                <span class="btn-icon">⬇️</span>
+                <span class="btn-text">Download Now</span>
+            </a>
         </div>
     </div>
 
@@ -100,11 +103,24 @@
         h2 {
             color: #222;
             margin-bottom: 10px;
+            font-size: 24px;
+            font-weight: bold;
         }
 
         p {
             color: #444;
             margin: 5px 0;
+        }
+
+        /* Download Button (Improved) */
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -124,14 +140,17 @@
     <div class="movie-container">
         <img src="https://i.ibb.co/Y4ZGr7mD/images-1.jpg" alt="Movie Poster" class="movie-poster">
         <div class="movie-details">
-            <h2></h2>
+            <h2>Farzi (2023)</h2>
             <p><strong>⭐ Rating:</strong> 8.5/10</p>
             <p><strong>🎭 Genre:</strong> Action, Mystery, Thriller</p>
             <p><strong>⏳ Duration:</strong> 2h 15m</p>
             <p>A Hindi Dubbed action thriller movie, featuring Ajith Kumar in the main role</p>
 
-            <!-- Download Button (Directly Visible) -->
-            <a id="download-btn" class="show-btn" target="_blank">⬇️ Download Now</a>
+            <!-- Download Button (Improved) -->
+            <a id="download-btn" class="download-btn" target="_blank">
+                <span class="btn-icon">⬇️</span>
+                <span class="btn-text">Download Now</span>
+            </a>
         </div>
     </div>
 
@@ -207,6 +226,8 @@
         h2 {
             color: #222;
             margin-bottom: 10px;
+            font-size: 24px;
+            font-weight: bold;
         }
 
         p {
@@ -214,12 +235,13 @@
             margin: 5px 0;
         }
 
-        /* Download Button */
-        #download-btn {
-            display: block;
-            text-align: center;
+        /* Download Button (Improved) */
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             margin-top: 15px;
-            padding: 12px 20px;
+            padding: 12px 24px;
             font-size: 18px;
             font-weight: bold;
             color: white;
@@ -227,19 +249,29 @@
             border-radius: 8px;
             text-decoration: none;
             box-shadow: 0 5px 15px rgba(255, 87, 34, 0.5);
-            transition: transform 0.3s ease-in-out, background 0.3s;
+            transition: transform 0.3s ease-in-out, background 0.3s, box-shadow 0.3s;
+            animation: pulse 2s infinite;
         }
 
-        #download-btn:hover {
+        .download-btn:hover {
             background: #e64a19;
-            transform: scale(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 87, 34, 0.7);
         }
 
-        /* Button Animation */
-        .show-btn {
-            opacity: 1 !important;
-            pointer-events: all !important;
-            animation: fadeIn 0.5s ease-in-out;
+        .btn-icon {
+            margin-right: 8px;
+        }
+
+        .btn-text {
+            font-size: 16px;
+        }
+
+        /* Button Pulse Animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
         /* Related Movies Section */
@@ -290,34 +322,34 @@
         });
     </script>
 </body>
-</html>￼Enter        }
-
-        /* Download Button */
-        #download-btn {
-            display: block;
-            text-align: center;
-            margin-top: 15px;
-            padding: 12px 20px;
-            font-size: 18px;
-            font-weight: bold;
-            color: white;
+</html>￼Enter            color: white;
             background: #ff5722;
             border-radius: 8px;
             text-decoration: none;
             box-shadow: 0 5px 15px rgba(255, 87, 34, 0.5);
-            transition: transform 0.3s ease-in-out, background 0.3s;
+            transition: transform 0.3s ease-in-out, background 0.3s, box-shadow 0.3s;
+            animation: pulse 2s infinite;
         }
 
-        #download-btn:hover {
+        .download-btn:hover {
             background: #e64a19;
-            transform: scale(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 87, 34, 0.7);
         }
 
-        /* Button Animation */
-        .show-btn {
-            opacity: 1 !important;
-      pointer-events: all !important;
-            animation: fadeIn 0.5s ease-in-out;
+        .btn-icon {
+            margin-right: 8px;
+        }
+
+        .btn-text {
+            font-size: 16px;
+        }
+
+        /* Button Pulse Animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
         /* Related Movies Section */
